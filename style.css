@@ -10,7 +10,7 @@ body {
   font-family: 'Manrope', sans-serif;
   font-size: 13px;
   background-color: var(--Light-Grayish-Blue);
-  /* border: 2px solid red; */
+  display: flex;
 }
 
 :root {
@@ -21,12 +21,11 @@ body {
 }
 
 .container {
-  /* border: 2px solid green; */
   min-height: 100vh;
   height: 510px;
   width: 325px;
   padding: 0;
-  margin-top: 150px;
+  margin-top: 250px;
 }
 
 .image-content img {
@@ -37,10 +36,11 @@ body {
 }
 
 .text-content {
-  /* border: 2px solid blue; */
   height: 307px;
   padding: 30px 27px 15px 40px;
   background-color: white;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
 }
 
 .text-content h5 {
@@ -57,10 +57,8 @@ body {
 .avatar {
   height: 60px;
   display: flex;
-  /* justify-content: space-between; */
   padding-bottom: 15px;
   align-items: center;
-  /* flex-direction: row; */
 }
 
 .userimage img {
@@ -95,4 +93,42 @@ p date {
 .shareIcon img {
   width: 16px;
   height: 13px;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    display: flex;
+  }
+
+  .container {
+    width: 730px;
+    height: 280px;
+    display: flex;
+    margin: 350px auto;
+  }
+
+  .image-content img {
+    width: 280px;
+    height: 280px;
+    background-size: cover;
+    border-radius: 10px 0 0 10px;
+    overflow: hidden;
+  }
+
+  .text-content {
+    height: 280px;
+    border-radius: 0 10px 10px 0;
+    overflow: hidden;
+    padding: 30px 27px 15px 40px;
+  }
+
+  .text-content h5 {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+
+  .user-details {
+    padding-right: 160px;
+  }
 }
